@@ -36,7 +36,7 @@ struct ContentView: View {
             
                 Text(firstNumberEmojis)
                     .font(.system(size: 80))
-                    .minimumScaleFactor(0.25)
+                    .minimumScaleFactor(0.15)
                     .multilineTextAlignment(.center)
             
                 Text("+")
@@ -45,7 +45,7 @@ struct ContentView: View {
             
                 Text(secondNumberEmojis)
                     .font(.system(size: 80))
-                    .minimumScaleFactor(0.25)
+                    .minimumScaleFactor(0.15)
                     .multilineTextAlignment(.center)
                         
             Spacer()
@@ -116,8 +116,8 @@ struct ContentView: View {
     }  // some View
 
     func generateNewEquation() {
-        firstNumber = Int.random(in: 1...10)
-        secondNumber = Int.random(in: 1...10)
+        firstNumber = Int.random(in: 1...25)
+        secondNumber = Int.random(in: 1...25)
         firstNumberEmojis = String(repeating: emojis.randomElement()!, count: firstNumber)
         secondNumberEmojis = String(repeating: emojis.randomElement()!, count: secondNumber)
     }
